@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Erick Montoya">
+	<title>Bucles For JS</title>
+</head>
+<body>
+	<h1>Números pares</h1>
+
+	<script>
+
+        // let numero1 = parseInt(prompt("Introduce un número"));
+        // let numero2 = parseInt(prompt("Introduce otro número"));
+
+        // document.write("Los números pares entre " + numero1 + " y " + numero2 + " son: ");
+		// /**/
+        // for (let i = numero1; i <= numero2; i++) {
+
+        //         if (i % 2 === 0){
+        //             document.write(" " +i);
+        //         }
+
+        // }
+
+     
+    let numero1 = parseInt(prompt("Introduce un número"));
+    let numero2 = parseInt(prompt("Introduce otro número"));
+
+    let menor = Math.min(numero1, numero2);
+    let mayor = Math.max(numero1, numero2);
+
+    document.write("Los números pares entre " + menor + " y " + mayor + " son: ");
+
+    for (let i = menor; i <= mayor; i++) {
+        if (i % 2 === 0){
+            document.write(" " + i);
+        }
+    }
+
+
+	</script>
+    
+<input type="button" value="Recargar" onclick="location.reload()">
+	
+</body>
+</html>

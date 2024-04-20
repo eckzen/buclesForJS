@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Erick Montoya">
+	<title>Bucles For JS</title>
+</head>
+<body>
+	<h1>Carrito de la compra</h1><br>
+    <h2>Introducir cinco precios diferentes de cinco de tus productos</h2>
+	<script>
+
+        // let precio1 = parseInt(prompt("Introduce el primer precio"));
+        // let precio2 = parseInt(prompt("Introduce el segundo precio"));
+        // let precio3 = parseInt(prompt("Introduce el tercer precio"));
+        // let precio4 = parseInt(prompt("Introduce el cuarto precio"));
+        // let precio5 = parseInt(prompt("Introduce el quinto precio"));  
+        
+        // let totalPrecio = precio1 + precio2 + precio3 + precio4 + precio5;
+
+        
+
+        // for( let i = 0; i < 100; i++){
+
+        //    if (i > 100){
+        //    let descuento = totalPrecio *0.15;
+        //    let descuentoFinal=descuento - totalPrecio;
+        //    document.write(descuentoFinal);
+        // }
+        // else{
+        //     document.write("Precio total: " + totalPrecio);
+        // }
+        // }
+
+
+        let precios = []; //varable con array vacío que almacenará los precios introducidos
+for (let i = 0; i < 5; i++) { //buble se ejecutará 5 veces, i se utiliza como contador y se incrementa cada vez
+    precios.push(parseInt(prompt("Introduce el precio " + (i + 1)))); // cada ejecución mostrará un prompt, push() agrega el número introducido en el array precios
+}
+
+let totalPrecio = 0; //esta variable almacena el precio total 
+for (let i = 0; i < precios.length; i++) { //for se ejecutará por cada elemento del array totalPrecio
+    totalPrecio += precios[i]; //cada iteración se añade el valor del precio en la posición i del array precios[] al valor totalPrecio. Esto suma todos los precios para calcular el precio total
+}
+
+if (totalPrecio > 100) {
+    let descuento = totalPrecio * 0.15;
+    let precioConDescuento = totalPrecio - descuento;
+    document.write("El precio original sería " + totalPrecio + " Precio total con descuento: " + precioConDescuento);
+} else {
+    document.write("Precio total: " + totalPrecio);
+}
+
+	</script>
+    
+<input type="button" value="Recargar" onclick="location.reload()">
+	
+</body>
+</html>
